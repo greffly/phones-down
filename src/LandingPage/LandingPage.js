@@ -6,11 +6,13 @@ const LandingPage = () => {
   return (
     <section className='titlePage'>
       <h1 className='title'>Phone Down Challenge</h1>
-      <Link to='/start'>
-        <button type='submit' className='startButton'>
-          Let's Do It!
-        </button>
-      </Link>
+      <div className='buttonLink'>
+        <Link to='/start'>
+          <button type='submit' className='startButton'>
+            Let's Do It!
+          </button>
+        </Link>
+      </div>
     </section>
   );
 };
