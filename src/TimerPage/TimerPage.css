@@ -1,0 +1,79 @@
+.timerPage {
+  background-image: url('../Images/cheers.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 50px auto 150px;
+  background-blend-mode: darken;
+  background-color: rgb(106, 106, 106, 0.4);
+  grid-template-rows: 100px 120px auto 100px;
+}
+
+.timerStopButton {
+  width: 270px;
+  height: 70px;
+  border-radius: 4px;
+  background-color: rgb(255, 255, 255, 0.9);
+  justify-self: center;
+  font-size: 1.3em;
+}
+
+.stopLink {
+  grid-row: 4;
+}
+
+.timerTitle {
+  color: white;
+  font-size: 1.8em;
+  grid-row: 1;
+}
+
+.timer {
+  color: white;
+  font-size: 4.5em;
+  grid-row: 2;
+  margin: 0;
+}
+
+.topicContainer {
+  width: 90%;
+  height: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.randomTopic {
+  background-color: rgb(193, 104, 81);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  width: 90%;
+  height: 90%;
+  border-radius: 5px;
+  grid-row: 3;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  font-size: 1.4em;
+  transform: translate3d(0, 0, 0);
+  transition: all 1s ease-in;
+}
+
+.randomTopic.next {
+  transform: translate3d(-110%, 0, 0);
+}
+
+.randomTopic p {
+  margin: 10px 10px 0;
+  align-self: center;
+}
+
+.nextTopic {
+  font-size: 1.5em;
+  margin: 0;
+}

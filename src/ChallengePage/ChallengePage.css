@@ -15,7 +15,6 @@
 .welcomeParticipant,
 .yourChallenge {
   color: white;
-  font-family: 'Quicksand', sans-serif;
 }
 
 .welcomeParticipant {
@@ -39,7 +38,6 @@
   background-color: rgb(255, 255, 255, 0.8);
   justify-self: center;
   font-size: 1.3em;
-  font-family: 'Quicksand', sans-serif;
 }
 
 .buttonSection {
@@ -77,8 +75,7 @@
 
 .rulesTitle,
 .ideasTitle {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 1.7em;
+  font-size: 1.6em;
   transform: translate3d(100%, 0, 0);
   transition: all 1s ease-out;
 }
@@ -90,8 +87,7 @@
 
 .gameRules,
 .ideasList {
-  font-size: 1.3em;
-  font-family: 'Quicksand', sans-serif;
+  font-size: 1em;
   padding: 30px;
   transform: translate3d(-100%, 0, 0);
   transition: all 1s ease-out;

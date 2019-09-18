@@ -48,7 +48,6 @@ input {
   padding-top: 15px;
   font-size: 1.4em;
   color: black;
-  font-family: 'Quicksand', sans-serif;
 }
 
 .joinButton {
@@ -58,7 +57,6 @@ input {
   background-color: rgb(255, 255, 255);
   justify-self: center;
   font-size: 1.3em;
-  font-family: 'Quicksand', sans-serif;
 }
 
 @media screen and (min-width: 370px) {

@@ -1,9 +1,49 @@
-import React, { Fragment, Component } from 'react';
+import React, { Component } from 'react';
 import MyContext from '../ContextProvider';
 import './ChallengePage.css';
 
 class ChallengePage extends Component {
+  constructor(props) {
+    super(props);
+    this.seconds = 0;
+    this.minutes = 0;
+    this.hours = 0;
+  }
   static contextType = MyContext;
+  handleStartChallenge = e => {
+    console.log('going to timer page!');
+    this.props.history.push('/timer');
+    setInterval(() => {
+      this.add();
+    }, 1000);
+  };
+  add() {
+    this.seconds++;
+    if (this.seconds >= 60) {
+      this.seconds = 0;
+      this.minutes++;
+      if (this.minutes >= 60) {
+        this.minutes = 0;
+        this.hours++;
+      }
+    }
+    console.log('timer working: ', this.minutes);
+    let timerTag = document.querySelector('.timer');
+    timerTag.innerHTML =
+      (this.hours ? (this.hours > 9 ? this.hours : '0' + this.hours) : '00') +
+      ':' +
+      (this.minutes
+        ? this.minutes > 9
+          ? this.minutes
+          : '0' + this.minutes
+        : '00') +
+      ':' +
+      (this.seconds > 9 ? this.seconds : '0' + this.seconds);
+    // this.timer();
+  }
+  timer() {
+    setTimeout(this.add(), 1000);
+  }
   handleRulesClick = e => {
     const rulesExpanded = document.querySelector('.rulesExpanded');
     const gameRules = document.querySelector('.gameRules');
@@ -56,7 +96,12 @@ class ChallengePage extends Component {
               Ideas
             </button>
           </div>
-          <button className='startChallenge'>Let's Do This!</button>
+          <button
+            className='startChallenge'
+            onClick={this.handleStartChallenge}
+          >
+            Let's Do This!
+          </button>
         </section>
         <section className='rulesExpanded'>
           <h2 className='rulesTitle'>Rules of the Game</h2>
